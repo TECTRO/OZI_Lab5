@@ -63,15 +63,6 @@ namespace OZI_Lab5
             return simpleDigit;
         }
 
-        public int GetSimpleIndex(int simpleDigit)
-        {
-            int index = 0;
-            while (GetSimpleDigit(index) < simpleDigit)
-                index++;
-
-            return index;
-        }
-
         public Keys GenerateRsaKeys(int maxDigitIndex = 10)
         {
             int Gcd(int a, int b)
