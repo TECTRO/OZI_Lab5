@@ -162,8 +162,10 @@ namespace OZI_Lab5
         public ExitEvent Execute()
         {
             var encryption = new Gamification();
-            var message = "some simple message".PrintLn("\nИсходное сообщение");
-            var messageKey = "key".PrintLn("ключ шифрования исходного сообщения");
+            Console.WriteLine("\nВведите исходное сообщение");
+            var message = Console.ReadLine().PrintLn("Исходное сообщение");
+            Console.WriteLine("Введите ключ шифрования");
+            var messageKey = Console.ReadLine().PrintLn("ключ шифрования исходного сообщения");
             var encryptedMessage = encryption.Encrypt(messageKey, message).PrintLn("зашифрованное сообщение");
 
             var keys = GenerateRsaKeys().PrintLn("Сгенерированные ключи");
